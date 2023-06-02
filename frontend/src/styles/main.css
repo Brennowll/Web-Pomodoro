@@ -1,0 +1,97 @@
+.main-container {
+    height: 90%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter {
+    height: 50%;
+    width: 100%;
+    background-color: #657992c4;
+    border-radius: 5px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav-container {
+    height: 10%;
+    width: 100%;
+}
+
+.main-nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav-buttons {
+    height: 90%;
+    width: 20%;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'arialRounded';
+    background-color: transparent;
+}
+
+.main-nav-buttons:active {
+    padding-top: 5px;
+}
+
+.main-nav-button-pomodoro {
+
+}
+
+.main-nav-button-short {
+
+}
+
+.main-nav-button-long {
+
+}
+
+.main-counter {
+    height: 55%;
+    width: 100%;
+    color: white;
+    font-size: 12rem;
+    font-family: 'arialRounded';
+    font-weight: bold;
+    letter-spacing: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-button-start {
+    height: 14%;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px #ffffffc0;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-family: 'arialRounded';
+    font-weight: bold;
+    color: #657992c4;
+}
+
+.main-button-start:hover {
+    cursor: pointer;
+}
+
+.main-button-start:active {
+    box-shadow: none;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}

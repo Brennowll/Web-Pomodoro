@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'arialRounded';
+    src: url('../fonts/arial-rounded-mt.ttf');
+}
+
+.header {
+    height: 10%;
+    width: 70%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2929293a;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-title img {
+    height: 20px;
+    width: auto;
+}
+
+.header-title h1 {
+    margin-left: 5px;
+    font-family: 'arialRounded';
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-button {
+    height: 30px;
+    width: 90px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #657992c4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-buttons-container button:hover {
+    cursor: pointer;
+    background-color: #7087a3c4;
+}
+
+.header-buttons-container button:active {
+    background-color: #5c6f84c4;
+}
+
+.header-button-icons {
+    height: 15px;
+    width: auto;
+    margin-right: 5px;
+}
