@@ -1,24 +1,30 @@
+import { useState } from "react"
 import "../styles/main.css"
+import MainNav from "./main_components/MainNav"
+import MainTimer from "./main_components/MainTimer"
+import MainButton from "./main_components/MainButton"
 
 const Main = () => {
+  const [pomodoroMinutes, setPomodoroMinutes] = useState(25)
+  const [pomodoroRunning, setPomodoroRunning] = useState(false)
+
   return (
     <main className="main-container">
       <div className="counter">
         <div className="main-nav-container">
-          <nav className="main-nav">
-            <button className="main-nav-button-pomodoro main-nav-buttons">
-              Pomodoro
-            </button>
-            <button className="main-nav-button-short main-nav-buttons">
-              Short Break
-            </button>
-            <button className="main-nav-button-long main-nav-buttons">
-              Long Break
-            </button>
-          </nav>
+          <MainNav
+            setPomodoroMinutes={setPomodoroMinutes}
+            setPomodoroRunning={setPomodoroRunning}
+          />
         </div>
-        <div className="main-counter">25:00</div>
-        <button className="main-button-start">START</button>
+        <MainTimer
+          pomodoroRunning={pomodoroRunning}
+          pomodoroMinutes={pomodoroMinutes}
+        />
+        <MainButton
+          pomodoroRunning={pomodoroRunning}
+          setPomodoroRunning={setPomodoroRunning}
+        />
       </div>
     </main>
   )
