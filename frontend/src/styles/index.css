@@ -1,21 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-}
-
-body {
-    background-color: #424e5e;
+  font-size: 62.5%;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.website-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.background-red {
+  background-color: rgb(186, 73, 73);
+}
+
+.background-aqua {
+  background-color: rgb(56, 133, 138);
+}
+
+.background-blue {
+  background-color: rgb(57, 112, 151);
+}
+
+.background-yellow {
+  background-color: rgb(164, 137, 60);
+}
+
+.background-purple {
+  background-color: rgb(125, 83, 162);
+}
+
+.background-pink {
+  background-color: rgb(175, 78, 145);
+}
+
+.background-green {
+  background-color: rgb(81, 138, 88);
+}
+
+.background-black {
+  background-color: rgb(84, 87, 100);
 }

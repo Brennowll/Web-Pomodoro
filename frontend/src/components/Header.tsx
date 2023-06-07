@@ -1,6 +1,10 @@
 import "../styles/header.css"
 
-const Header = () => {
+interface Props {
+  setIsSettingOpen: (isSettingOpen: boolean) => void
+}
+
+const Header = (props: Props) => {
   return (
     <header className="header">
       <div className="header-title">
@@ -8,7 +12,12 @@ const Header = () => {
         <h1>Pomofocus</h1>
       </div>
       <div className="header-buttons-container">
-        <button className="header-button-settings header-button">
+        <button
+          className="header-button-settings header-button"
+          onClick={() => {
+            props.setIsSettingOpen(true)
+          }}
+        >
           <img
             src={process.env.PUBLIC_URL + "/media/icon_settings.png"}
             alt=""

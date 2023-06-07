@@ -3,13 +3,16 @@ import { useState } from "react"
 interface Props {
   setPomodoroRunning: (boolean: boolean) => void
   setPomodoroMinutes: (minutes: number) => void
+  setNavButtonActived: (name: string) => void
+  navButtonActived: string
+  settingPomodoroMinutes: number
+  settingShortBreakMinutes: number
+  settingLongBreakMinutes: number
 }
 
 const MainNav = (props: Props) => {
-  const [navButtonActived, setNavButtonActived] = useState("Pomodoro")
-
   const navButtonStyle = (name: string) => {
-    if (name === navButtonActived) {
+    if (name === props.navButtonActived) {
       return "main-nav-button-pomodoro main-nav-buttons main-nav-button-active"
     } else {
       return "main-nav-button-pomodoro main-nav-buttons"
@@ -19,7 +22,7 @@ const MainNav = (props: Props) => {
   const handleNavClick = (minutes: number, buttonName: string) => {
     props.setPomodoroRunning(false)
     props.setPomodoroMinutes(minutes)
-    setNavButtonActived(buttonName)
+    props.setNavButtonActived(buttonName)
   }
 
   return (
@@ -27,7 +30,7 @@ const MainNav = (props: Props) => {
       <button
         className={navButtonStyle("Pomodoro")}
         onClick={() => {
-          handleNavClick(25, "Pomodoro")
+          handleNavClick(props.settingPomodoroMinutes, "Pomodoro")
         }}
       >
         Pomodoro
@@ -35,7 +38,7 @@ const MainNav = (props: Props) => {
       <button
         className={navButtonStyle("Short Break")}
         onClick={() => {
-          handleNavClick(5, "Short Break")
+          handleNavClick(props.settingShortBreakMinutes, "Short Break")
         }}
       >
         Short Break
@@ -43,7 +46,7 @@ const MainNav = (props: Props) => {
       <button
         className={navButtonStyle("Long Break")}
         onClick={() => {
-          handleNavClick(10, "Long Break")
+          handleNavClick(props.settingLongBreakMinutes, "Long Break")
         }}
       >
         Long Break

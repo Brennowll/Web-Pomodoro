@@ -4,7 +4,15 @@ import MainNav from "./main_components/MainNav"
 import MainTimer from "./main_components/MainTimer"
 import MainButton from "./main_components/MainButton"
 
-const Main = () => {
+interface Props {
+  setNavButtonActived: (name: string) => void
+  navButtonActived: string
+  settingPomodoroMinutes: number
+  settingShortBreakMinutes: number
+  settingLongBreakMinutes: number
+}
+
+const Main = (props: Props) => {
   const [pomodoroMinutes, setPomodoroMinutes] = useState(25)
   const [pomodoroRunning, setPomodoroRunning] = useState(false)
 
@@ -15,11 +23,20 @@ const Main = () => {
           <MainNav
             setPomodoroMinutes={setPomodoroMinutes}
             setPomodoroRunning={setPomodoroRunning}
+            setNavButtonActived={props.setNavButtonActived}
+            navButtonActived={props.navButtonActived}
+            settingPomodoroMinutes={props.settingPomodoroMinutes}
+            settingShortBreakMinutes={props.settingShortBreakMinutes}
+            settingLongBreakMinutes={props.settingLongBreakMinutes}
           />
         </div>
         <MainTimer
           pomodoroRunning={pomodoroRunning}
+          setPomodoroRunning={setPomodoroRunning}
           pomodoroMinutes={pomodoroMinutes}
+          settingPomodoroMinutes={props.settingPomodoroMinutes}
+          settingShortBreakMinutes={props.settingShortBreakMinutes}
+          settingLongBreakMinutes={props.settingLongBreakMinutes}
         />
         <MainButton
           pomodoroRunning={pomodoroRunning}
